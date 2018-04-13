@@ -80,7 +80,7 @@ public class Scene {
 		playerScore = 0;
 		playerSkinIndex = game.getPlayerSelectedSkinIndex();
 
-		countDownToStart = 6;
+		countDownToStart = 4;
 		countDownTimer = new Timer();
 		countDownTimer.start();
 		
@@ -157,7 +157,7 @@ public class Scene {
 			
 			gameplayGui.setCountDownTime(countDownToStart - time - 1);
 			
-			if (time > 5) {
+			if (time > countDownToStart - 1) {
 				timeLeftTimer.start();
 				countDownToStart = 0;
 			}
